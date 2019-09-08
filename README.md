@@ -1,5 +1,15 @@
-# xlsx_to_h2
+# xlsx_to_db
 
-Java Library to Convert Excel document to H2 Database quickly, 
+Java Library to Convert Excel document to Database format quickly for data processing, 
 
-H2 Schema and Data will be intiliazed automatically
+Sample code
+-----------
+```java
+File = getExcelFile();
+Connection conn = getDbConnection();
+Xlsx2DbConverter converter = new Xlsx2DbConverter(file, conn);
+converter.convert(true, null);
+//
+Now you can see all the tables populated with excel data 
+
+```
